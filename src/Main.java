@@ -51,22 +51,23 @@ public class Main {
         int masha = 67760;
         int denis = 83690;
         int kristina = 76230;
-        int zpmasha = 67760 / 100 * 10;
-        System.out.println(zpmasha + " " + "рублей нужно добавить к зп Маши");
-        int zpdenis = 83690 / 100 * 10;
-        System.out.println(zpdenis + " " + "рублей нужно добавить к зп Дениса");
-        int zpkristina = 76230 / 100 * 10;
-        System.out.println(zpkristina + " " + "рублей нужно добавить к зп Кристины");
-        int dayYears = 365;
-        int zpNewMasha = 67760 + 6770;
-        System.out.println("Маша тепер получает" + " " + zpNewMasha + " " + "рублей." + " " + "Годовой доход вырос на" + " " +
-                zpmasha + " " + "рублей.");
-        int zpNewDenis = 83690 + 8360;
-        System.out.println("Денис тепер получает" + " " + zpNewDenis + " " + "рублей." + " " + "Годовой доход вырос на" + " " +
-                zpdenis + " " + "рублей.");
-        int zpNewKristina = 76230 + 7620;
-        System.out.println("Кристина тепер получает" + " " + zpNewKristina + " " + "рублей." + " " + "Годовой доход вырос на" + " " +
-                zpkristina + " " + "рублей.");
+        int percent = 10;
+        double multi = percent / (100 * 1.0);
+
+        int mashaNewZp = (int) (masha + (masha * multi));
+        int denisNewZp = (int) (denis + (denis * multi));
+        int kristinaNewZp = (int) (kristina + (kristina * multi));
+
+        int mashaDifference = (mashaNewZp - masha) * 12;
+        int denisDifference = (denisNewZp - denis) * 12;
+        int kristinaDifference = (kristinaNewZp - kristina) *12;
+
+        System.out.println("Кристина тепер получает" + " " + kristina + " " + "рублей." + " " + "Годовой доход вырос на" + " " +
+                kristinaDifference + " " + "рублей.");
+        System.out.println("Маша тепер получает" + " " + masha + " " + "рублей." + " " + "Годовой доход вырос на" + " " +
+                mashaDifference + " " + "рублей.");
+        System.out.println("Денис тепер получает" + " " + denis + " " + "рублей." + " " + "Годовой доход вырос на" + " " +
+                denisDifference + " " + "рублей.");
 
 
 
